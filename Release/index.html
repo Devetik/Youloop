@@ -10,7 +10,7 @@
 </head>
 <body class="background" data-bs-spy="scroll" data-bs-target="#menu" style="min-width: 350px;">
 
-    <nav class="navbar navbar-dark bg-dark navbar-expand-lg sticky-top p-2" id="menuspy">
+    <nav class="navbar navbar-dark bg-dark navbar-expand-lg sticky-top p-2  pannel-nav" id="menuspy">
         <div class="navbar-brand">
             <img src="img/YoulooplogoGW.png" class="mx-auto" style="height: 30px">
             Youloop
@@ -55,8 +55,8 @@
                     </li>
                 </ul>
                 <div class="slider col-10 offset-1 m-0 w-100">
-                    <input type="range" class="range__slider w-75" id="formControlRangeTot" value="100" max="150" style="pointer-events: none;">
-                    <span id="totalpercent" class="text-white"></span>
+                    <input type="range" class="range__slider w-75" id="formControlRangeTot" value="100" max="115" style="pointer-events: none;">
+                    <span id="totalpercent" style="color: white;"></span>
                 </div>
             </div>
             
@@ -72,7 +72,7 @@
     <span id="f0" class="anchor"></span>
 
         <div class="row g-0 m-5" id="revenu">
-            <div class="card  m-auto col-12 col-sm-6 col-md-3">
+            <div class="card  m-auto col-12 col-sm-6 col-md-3 revenu">
                 <dic class="card-header text-center">Revenu annuel</dic>
                 <div class="card-body">
                     <small class="text-muted">
@@ -86,7 +86,7 @@
                 </div>
             </div>
     
-            <div class="card m-auto col-12 col-sm-6 col-md-3">
+            <div class="card m-auto col-12 col-sm-6 col-md-3 revenu">
                 <dic class="card-header text-center">Revenu annuel Youloop</dic>
                 <div class="card-body">
                     <small class="text-muted">
@@ -396,7 +396,7 @@
                             </div>
     
                             <div class="col-4">
-                                <p class="text-dark fw-bold" id="feeCombBenef"></p>
+                                <p class=" fw-bold" id="feeCombBenef"></p>
                             </div>
     
                             <small class="text-muted m-0"></small>

@@ -2,6 +2,7 @@ let input = document.querySelector("#annual_revenue_field");
 let inputYl = document.querySelector("#expected_youloop_field");
 let error = document.querySelector("#erreur");
 let errorYl = document.querySelector("#erreurYl");
+let benefice = "bénéfices"
 
 input.addEventListener("keyup", () => {
   if(isNaN(input.value + inputYl.value)){
@@ -90,18 +91,29 @@ function calculTotal(){
   /* ----- Benefices ------- */
   document.querySelector("#feeBaseBenef").innerHTML = "Total des bénéfices sans Youloop " + (100 - valueTot).toFixed(1) + " %<br>" + Math.round(parseInt(document.querySelector("#annual_revenue_field").value) - ((valueTot / 100) * parseInt(document.querySelector("#annual_revenue_field").value))).toLocaleString('ch')  + " CHF";
   document.querySelector("#feeYLBenef").innerHTML = "Bénéfices provenant de Youloop " + (100 - valueYLTot).toFixed(1) + " %<br>" + (parseInt(document.querySelector("#expected_youloop_field").value) - ((document.querySelector("#expected_youloop_field").value/100) * valueYLTot)).toLocaleString('ch') + " CHF";
-  document.querySelector("#feeCombBenef").innerHTML = "Total des bénéfices avec Youloop " + ((((100 - valueTot)*100000000 / revenueAnnuel)+((100 - valueYLTot)/100*revenueAnnuelYouLoop))*100/ valueCombo).toFixed(1)  + " %<br>" + (parseInt((document.querySelector("#annual_revenue_field").value) - ((valueTot / 100) * parseInt(document.querySelector("#annual_revenue_field").value))) + parseInt((document.querySelector("#expected_youloop_field").value) - ((document.querySelector("#expected_youloop_field").value/100) * valueYLTot))).toLocaleString('ch') + " CHF";
+  document.querySelector("#feeCombBenef").innerHTML = "Total des " + benefice + " avec Youloop " + ((((100 - valueTot)*100000000 / revenueAnnuel)+((100 - valueYLTot)/100*revenueAnnuelYouLoop))*100/ valueCombo).toFixed(1)  + " %<br>" + (parseInt((document.querySelector("#annual_revenue_field").value) - ((valueTot / 100) * parseInt(document.querySelector("#annual_revenue_field").value))) + parseInt((document.querySelector("#expected_youloop_field").value) - ((document.querySelector("#expected_youloop_field").value/100) * valueYLTot))).toLocaleString('ch') + " CHF";
     /* ----- Total slider ------- */
   document.querySelector("#formControlRangeTot").value = parseInt(parseInt(value1) + parseInt(value2) + parseInt(value3) + parseInt(value4) + parseInt(value5) + parseInt(value6) + parseInt(value7) + parseInt(value8));
   document.querySelector("#totalpercent").innerHTML = parseInt(parseInt(value1) + parseInt(value2) + parseInt(value3) + parseInt(value4) + parseInt(value5) + parseInt(value6) + parseInt(value7) + parseInt(value8)) + " %";
 
+  if (valueTot <= 100){
+    document.querySelector("#totalpercent").style.color = "#B2FAAF";
+  } else if (valueTot > 100){
+    document.querySelector("#totalpercent").style.color = "red";
+  }
+
   if (((((100 - valueTot)*100000000 / revenueAnnuel)+((100 - valueYLTot)/100*revenueAnnuelYouLoop))*100/ valueCombo) < 0) {
-    console.log("petit");
+    console.log("red");
+    benefice = "pertes";
     document.querySelector("#feeCombBenef").style.color = "red";
   } else if (((((100 - valueTot)*100000000 / revenueAnnuel)+((100 - valueYLTot)/100*revenueAnnuelYouLoop))*100/ valueCombo) == 0) {
     document.querySelector("#feeCombBenef").style.color = "black";
+    benefice = "bénéfices";
   } else if (((((100 - valueTot)*100000000 / revenueAnnuel)+((100 - valueYLTot)/100*revenueAnnuelYouLoop))*100/ valueCombo) > 0) {
+    
     document.querySelector("#feeCombBenef").style.color = "green";
+    benefice = "bénéfices";
+    console.log("good");
   }
 }
 function caclFrais1(){
