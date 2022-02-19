@@ -1,0 +1,21 @@
+.background{
+    background-color: white;
+}
+
+.bg_benef{
+    background-color: white;
+    border: 2px black solid;
+}
+html{
+    scroll-behavior:smooth;
+  }
+
+#matpremiere{
+    offset:252px;
+}
+.anchor{
+    display: block;
+    position: relative;
+    top: -60px;
+    visibility: hidden;
+}
