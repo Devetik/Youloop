@@ -103,17 +103,14 @@ function calculTotal(){
   }
 
   if (((((100 - valueTot)*100000000 / revenueAnnuel)+((100 - valueYLTot)/100*revenueAnnuelYouLoop))*100/ valueCombo) < 0) {
-    console.log("red");
     benefice = "pertes";
     document.querySelector("#feeCombBenef").style.color = "red";
   } else if (((((100 - valueTot)*100000000 / revenueAnnuel)+((100 - valueYLTot)/100*revenueAnnuelYouLoop))*100/ valueCombo) == 0) {
     document.querySelector("#feeCombBenef").style.color = "black";
     benefice = "bénéfices";
   } else if (((((100 - valueTot)*100000000 / revenueAnnuel)+((100 - valueYLTot)/100*revenueAnnuelYouLoop))*100/ valueCombo) > 0) {
-    
     document.querySelector("#feeCombBenef").style.color = "green";
     benefice = "bénéfices";
-    console.log("good");
   }
 }
 function caclFrais1(){
