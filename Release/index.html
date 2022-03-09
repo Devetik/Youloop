@@ -10,10 +10,11 @@
 </head>
 <body class="background" data-bs-spy="scroll" data-bs-target="#menu" style="min-width: 350px;">
 
-    <nav class="navbar navbar-dark bg-dark navbar-expand-lg sticky-top p-2  pannel-nav" id="menuspy">
+    <nav class="navbar navbar-dark bg-dark navbar-expand-lg sticky-top p-2" id="menuspy">
         <div class="navbar-brand">
+            <a class="text-decoration-none text-white" href="../index.html">
             <img src="img/YoulooplogoGW.png" class="mx-auto" style="height: 30px">
-            Youloop
+            Youloop</a>
         </div>
         <div class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
             <span class="navbar-toggler-icon"></span>
@@ -30,10 +31,10 @@
                         <a href="#f1" class="nav-link pd-0">Matière</a>
                     </li>
                     <li class="nav-item pd-0">
-                        <a href="#f2" class="nav-link pd-0">Main-d'œuvre</a>
+                        <a href="#f2" class="nav-link pd-0">Ouvrier</a>
                     </li>
                     <li class="nav-item pd-0">
-                        <a href="#f3" class="nav-link pd-0">Immobilier</a>
+                        <a href="#f3" class="nav-link pd-0">Locaux</a>
                     </li>
                     <li class="nav-item pd-0">
                         <a href="#f4" class="nav-link pd-0">Administratif</a>
@@ -45,7 +46,7 @@
                         <a href="#f6" class="nav-link pd-0">Packaging </a>
                     </li>
                     <li class="nav-item pd-0">
-                        <a href="#f7" class="nav-link pd-0">A&D</a>
+                        <a href="#f7" class="nav-link pd-0">Investissements</a>
                     </li>
                     <li class="nav-item pd-0">
                         <a href="#f8" class="nav-link pd-0">Autre</a>
@@ -54,7 +55,7 @@
                         <a href="#f9" class="nav-link pd-0">Bénéfices</a>
                     </li>
                 </ul>
-                <div class="slider col-10 offset-1 m-0 w-100">
+                <div id="slidertotal" class="slider col-10 offset-1 m-0 w-100">
                     <input type="range" class="range__slider w-75" id="formControlRangeTot" value="100" max="115" style="pointer-events: none;">
                     <span id="totalpercent" style="color: white;"></span>
                 </div>
@@ -72,7 +73,7 @@
     <span id="f0" class="anchor"></span>
 
         <div class="row g-0 m-5" id="revenu">
-            <div class="card  m-auto col-12 col-sm-6 col-md-3 revenu">
+            <div class="card  m-auto col-12 col-sm-6 col-md-3">
                 <dic class="card-header text-center">Revenu annuel</dic>
                 <div class="card-body">
                     <small class="text-muted">
@@ -86,7 +87,7 @@
                 </div>
             </div>
     
-            <div class="card m-auto col-12 col-sm-6 col-md-3 revenu">
+            <div class="card m-auto col-12 col-sm-6 col-md-3">
                 <dic class="card-header text-center">Revenu annuel Youloop</dic>
                 <div class="card-body">
                     <small class="text-muted">
@@ -139,7 +140,7 @@
             <!-- Frais #2 -->
             <div class="pannel card m-2">
                 <div class="card-header bg-success text-white">
-                    Frais #2 (Main-d'œuvre 100 / 30)
+                    Frais #2 (Main d'oeuvre 100 / 30)
                 </div>
                 <div class="card-body">
                     <div class="container">
@@ -161,7 +162,7 @@
                                 oninput="document.querySelector('#slider2').value = this.value; calculTotal()">
                                 <output id="slider2" class="sliderValue" style="line-height: 50px;">30</output>%
                             </div>
-                            <small class="text-muted m-0">Indiquez les frais lié à la main-d'œuvre.</small>
+                            <small class="text-muted m-0">Indiquez les frais que vous avez pour la main d'oeuvre</small>
                         </div>
                     </div>
                 </div>
@@ -192,7 +193,7 @@
                                 oninput="document.querySelector('#slider3').value = this.value; calculTotal()">
                                 <output id="slider3" class="sliderValue" style="line-height: 50px;">8</output>%
                             </div>
-                            <small class="text-muted m-0">Indiquez les frais immobilier que vous avez.</small>
+                            <small class="text-muted m-0">Indiquez les frais que vous avez en real estate</small>
                         </div>
                     </div>
                 </div>
@@ -223,7 +224,7 @@
                                 oninput="document.querySelector('#slider4').value = this.value; calculTotal()">
                                 <output id="slider4" class="sliderValue" style="line-height: 50px;">15</output>%
                             </div>
-                            <small class="text-muted m-0">Indiquez les frais administratif que vous avez.</small>
+                            <small class="text-muted m-0">Indiquez les frais administratif que vous avez</small>
                         </div>
                     </div>
                 </div>
@@ -254,7 +255,7 @@
                                 oninput="document.querySelector('#slider5').value = this.value; calculTotal()">
                                 <output id="slider5" class="sliderValue" style="line-height: 50px;">3</output>%
                             </div>
-                            <small class="text-muted m-0">Indiquez les frais marketing que vous avez.</small>
+                            <small class="text-muted m-0">Indiquez les frais marketing que vous avez</small>
                         </div>
                     </div>
                 </div>
@@ -285,7 +286,7 @@
                                 oninput="document.querySelector('#slider6').value = this.value; calculTotal()">
                                 <output id="slider6" class="sliderValue" style="line-height: 50px;">2</output>%
                             </div>
-                            <small class="text-muted m-0">Indiquez les frais de packaging que vous avez.</small>
+                            <small class="text-muted m-0">Indiquez les frais de packaging que vous avez</small>
                         </div>
                     </div>
                 </div>
@@ -294,7 +295,7 @@
             <!-- Frais #7 -->
             <div class="pannel card m-2">
                 <div class="card-header bg-success text-white">
-                    Frais #7 (Dépréciation & amortissement 100 / 100)
+                    Frais #7 (Dépréciation & amortisation 100 / 100)
                 </div>
                 <div class="card-body">
                     <div class="container">
@@ -316,7 +317,7 @@
                                 oninput="document.querySelector('#slider7').value = this.value; calculTotal()">
                                 <output id="slider7" class="sliderValue" style="line-height: 50px;">1</output>%
                             </div>
-                            <small class="text-muted m-0">Indiquez les frais de dépréciation et d'amortissement que vous avez.</small>
+                            <small class="text-muted m-0">Indiquez les frais de dépréciation et d'amortisation que vous avez</small>
                         </div>
                     </div>
                 </div>
@@ -347,13 +348,42 @@
                                 oninput="document.querySelector('#slider8').value = this.value; calculTotal()">
                                 <output id="slider8" class="sliderValue" style="line-height: 50px;">3</output>%
                             </div>
-                            <small class="text-muted m-0">Indiquez les frais non spéficié dans le formulaire.</small>
+                            <small class="text-muted m-0">Indiquez les frais qui n'ont pas été demandé au dessus</small>
                         </div>
                     </div>
                 </div>
             </div>
         <span id="f9" class="anchor"></span>
-           
+            <!-- Frais #9 -->
+            <div class="pannel card m-2">
+                <div class="card-header bg-success text-white">
+                    Frais #9 (Comission Youloop 0 / 30)
+                </div>
+                <div class="card-body">
+                    <div class="container">
+                        <div class="row fs-8 text-start">
+                            <div class="col-4">
+                                <small class="text-muted" id="feeBase9"></small>                  
+                            </div>
+    
+                            <div class="col-4">
+                                <small class="text-muted" id="feeYL9"></small>  
+                            </div>
+    
+                            <div class="col-4">
+                                <p class="text-dark" id="feeComb9"></p>
+                            </div>
+        
+                            <div class="slider col-10 offset-1 ms-0">
+                                <input type="range" class="range__slider w-75" id="formControlRange" value="30" max="30"
+                                oninput="document.querySelector('#slider9').value = this.value; calculTotal()">
+                                <output id="slider9" class="sliderValue" style="line-height: 50px;">30</output>%
+                            </div>
+                            <small class="text-muted m-0"></small>
+                        </div>
+                    </div>
+                </div>
+            </div>
             
             <!-- Frais Total -->
             <div class="pannel card m-2">
@@ -380,7 +410,7 @@
             </div>
         
             <!-- Bénéfices -->
-            <div class=" card m-2">
+            <div class="card m-2">
                 <div class="card-header bg-success fw-bold text-white">
                     Bénéfices
                 </div>
@@ -396,7 +426,7 @@
                             </div>
     
                             <div class="col-4">
-                                <p class=" fw-bold" id="feeCombBenef"></p>
+                                <p class="fw-bold" id="feeCombBenef"></p>
                             </div>
     
                             <small class="text-muted m-0"></small>
@@ -407,10 +437,10 @@
         </div>
     </div>
  
-   
- <div class="footer  text-end bg-secondary text-white">
-     <small class="me-2">© S.Cuttat</small>
- </div>
+    <div class="footer  text-end bg-dark text-white">
+        <small class="me-2">© S.Cuttat</small>
+    </div>
+
 
     <script src="Script/Fee-Calculator.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script> 
