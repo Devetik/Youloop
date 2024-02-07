@@ -1,40 +1,39 @@
+// Sélection des éléments DOM
 let input = document.querySelector("#annual_revenue_field");
 let inputYl = document.querySelector("#expected_youloop_field");
 let error = document.querySelector("#erreur");
 let errorYl = document.querySelector("#erreurYl");
 
+// Écouteur d'événement pour le champ input
 input.addEventListener("keyup", () => {
-  if(isNaN(input.value + inputYl.value)){
-    if(isNaN(input.value)){
-      error.style.display = "";
-      input.style.color = "red";
-    }
-  }
-  else{
-      error.style.display = "none";
-      input.style.color = "black";
-      calculTotal();
+  if(isNaN(parseFloat(input.value))){
+    error.style.display = "";
+    input.style.color = "red";
+  } else {
+    error.style.display = "none";
+    input.style.color = "black";
+    calculTotal();
   }   
 });
+
+// Écouteur d'événement pour le champ inputYl
 inputYl.addEventListener("keyup", () => {
-  if(isNaN(input.value + inputYl.value)){
-    if(isNaN(inputYl.value)){
-      errorYl.style.display = "";
-      inputYl.style.color = "red";
-    }
-  }
-  else{
-      errorYl.style.display = "none";
-      inputYl.style.color = "black";
-      calculTotal();
+  if(isNaN(parseFloat(inputYl.value))){
+    errorYl.style.display = "";
+    inputYl.style.color = "red";
+  } else {
+    errorYl.style.display = "none";
+    inputYl.style.color = "black";
+    calculTotal();
   }   
 });
 
-
+// Fonction de calcul des totaux
 function calculTotal(){
-  let revenueAnnuel = parseInt(document.querySelector("#annual_revenue_field").value);
-  let revenueAnnuelYouLoop = parseInt(document.querySelector("#expected_youloop_field").value);
-  let valueCombo = parseInt(document.querySelector("#annual_revenue_field").value) + parseInt(document.querySelector("#expected_youloop_field").value);
+  // Récupération des valeurs des champs
+  let revenueAnnuel = parseFloat(input.value);
+  let revenueAnnuelYouLoop = parseFloat(inputYl.value);
+  let valueCombo = revenueAnnuel + revenueAnnuelYouLoop;
   let value1 = parseInt(document.querySelector('#slider1').value);
   let value2 = parseInt(document.querySelector('#slider2').value);
   let value3 = parseInt(document.querySelector('#slider3').value);
@@ -44,11 +43,9 @@ function calculTotal(){
   let value7 = parseInt(document.querySelector('#slider7').value);
   let value8 = parseInt(document.querySelector('#slider8').value);
   let value9 = parseInt(document.querySelector('#slider9').value);
-  let Ray = parseInt(document.querySelector("#expected_youloop_field").value);
+  let Ray = parseInt(inputYl.value);
   let valueTot = (value1 + value2 + value3 + value4 + value5 + value6 + value7 + value8);
   let valueYLTot = (value1 + value2*0.3 + value3*0 + value4*0.5 + value5 + value6*2 + value7 + value8*0.3 + value9);
-  let valueTotal = parseInt(value1) + parseInt(value2) + parseInt(value3) + parseInt(value4) + parseInt(value5) + parseInt(value6) + parseInt(value7) + parseInt(value8);
-
 
 
   /* ----- 1er slider ------- */
