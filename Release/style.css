@@ -48,7 +48,8 @@ html{
 }
 
 .nav-item {
-    padding-left: 50px;
+    padding: auto;
+    margin-left: auto;
 }
 
 /* Media query pour un affichage inférieur à la taille moyenne */
@@ -62,6 +63,10 @@ html{
         margin-left: auto;
         margin-right: auto;
         margin-bottom: 20px;
+    }
+
+    .nav-item {
+        padding-left: 50px;
     }
 }
 
