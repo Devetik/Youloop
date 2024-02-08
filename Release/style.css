@@ -36,3 +36,32 @@ html{
 .revenu:hover{
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
+
+
+/* Styles par défaut */
+.texte {
+    font-weight: normal; /* Texte normal par défaut */
+}
+
+.card-margin {
+    margin:auto
+}
+
+.nav-item {
+    padding-left: 50px;
+}
+
+/* Media query pour un affichage inférieur à la taille moyenne */
+@media (max-width: 768px) {
+    .texte {
+        font-weight: bold; /* Texte en gras pour les écrans plus petits que la taille moyenne */
+    }
+
+    .card-margin {
+        margin-top: auto;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 20px;
+    }
+}
+

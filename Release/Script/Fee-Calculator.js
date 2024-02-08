@@ -49,17 +49,27 @@ function calculTotal(){
 
 
   /* ----- 1er slider ------- */
-  document.querySelector("#feeBase1").innerHTML = "Frais de base " + value1 + " %<br>" + ((document.querySelector("#annual_revenue_field").value/100) * value1).toLocaleString('ch') + " CHF";
-  document.querySelector("#feeYL1").innerHTML = "Frais de Youloop " + value1 + " %<br>" + ((document.querySelector("#expected_youloop_field").value/100) * value1).toLocaleString('ch') + " CHF";
-  document.querySelector("#feeComb1").innerHTML = "Total des frais " + Math.round(((document.querySelector("#annual_revenue_field").value/100000) * value1) + ((document.querySelector("#expected_youloop_field").value/100000) * value1) / valueCombo) + " %<br>" + (parseInt(document.querySelector("#annual_revenue_field").value)/100*value1 + parseInt(document.querySelector("#expected_youloop_field").value/100*value1)).toLocaleString('ch') + " CHF";
+  // document.querySelector("#feeBase1").innerHTML = "Frais de base " + value1 + " %<br>" + ((document.querySelector("#annual_revenue_field").value/100) * value1).toLocaleString('ch') + " CHF";
+  document.querySelector("#feeBase1").innerHTML = "Frais de base " + value1 + " % ";
+  document.querySelector("#feeBase1BIS").innerHTML = ((document.querySelector("#annual_revenue_field").value/100) * value1).toLocaleString('ch') + " CHF";
+  document.querySelector("#feeYL1").innerHTML = "Frais de Youloop " + value1 + " % ";
+  document.querySelector("#feeYL1BIS").innerHTML = ((document.querySelector("#expected_youloop_field").value/100) * value1).toLocaleString('ch') + " CHF";
+  document.querySelector("#feeComb1").innerHTML = "Total des frais " + Math.round(((document.querySelector("#annual_revenue_field").value/100000) * value1) + ((document.querySelector("#expected_youloop_field").value/100000) * value1) / valueCombo) + " % ";
+  document.querySelector("#feeComb1BIS").innerHTML = (parseInt(document.querySelector("#annual_revenue_field").value)/100*value1 + parseInt(document.querySelector("#expected_youloop_field").value/100*value1)).toLocaleString('ch') + " CHF";
   /* ----- 2eme slider ------- */
-  document.querySelector("#feeBase2").innerHTML = "Frais de base " + value2 + " %<br>" + ((document.querySelector("#annual_revenue_field").value/100) * value2).toLocaleString('ch') + " CHF";
-  document.querySelector("#feeYL2").innerHTML = "Frais de Youloop " + Math.round(value2 *0.3) + " %<br>" + Math.round((document.querySelector("#expected_youloop_field").value/100) * (value2 *0.3)).toLocaleString('ch') + " CHF";
-  document.querySelector("#feeComb2").innerHTML = "Total des frais " + Math.round((parseInt(document.querySelector("#annual_revenue_field").value)/100*value2 + parseInt(document.querySelector("#expected_youloop_field").value/100*(value2 *0.3))) * 100 / valueCombo) + " %<br>" + (parseInt(document.querySelector("#annual_revenue_field").value)/100*value2 + parseInt(document.querySelector("#expected_youloop_field").value/100*(value2 *0.3))).toLocaleString('ch') + " CHF";
+  document.querySelector("#feeBase2").innerHTML = "Frais de base " + value2 + " %";
+  document.querySelector("#feeBase2BIS").innerHTML = ((document.querySelector("#annual_revenue_field").value/100) * value2).toLocaleString('ch') + " CHF";
+  document.querySelector("#feeYL2").innerHTML = "Frais de Youloop " + Math.round(value2 *0.3) + " %";
+  document.querySelector("#feeYL2BIS").innerHTML = Math.round((document.querySelector("#expected_youloop_field").value/100) * (value2 *0.3)).toLocaleString('ch') + " CHF";
+  document.querySelector("#feeComb2").innerHTML = "Total des frais " + Math.round((parseInt(document.querySelector("#annual_revenue_field").value)/100*value2 + parseInt(document.querySelector("#expected_youloop_field").value/100*(value2 *0.3))) * 100 / valueCombo) + " %";
+  document.querySelector("#feeComb2BIS").innerHTML = (parseInt(document.querySelector("#annual_revenue_field").value)/100*value2 + parseInt(document.querySelector("#expected_youloop_field").value/100*(value2 *0.3))).toLocaleString('ch') + " CHF";
   /* ----- 3eme slider ------- */
-  document.querySelector("#feeBase3").innerHTML = "Frais de base " + value3 + " %<br>" + ((document.querySelector("#annual_revenue_field").value/100) * value3).toLocaleString('ch') + " CHF";
-  document.querySelector("#feeYL3").innerHTML = "Frais de Youloop " + value3 * 0 + " %<br>" + ((document.querySelector("#expected_youloop_field").value/100) * value3 * 0).toLocaleString('ch') + " CHF";
-  document.querySelector("#feeComb3").innerHTML = "Total des frais " + Math.round((parseInt(document.querySelector("#annual_revenue_field").value)/100*value3 + parseInt(document.querySelector("#expected_youloop_field").value/100*(value3 *0))) * 100 / valueCombo) + " %<br>" + (parseInt(document.querySelector("#annual_revenue_field").value)/100*value3 + parseInt(document.querySelector("#expected_youloop_field").value/100*value3*0)).toLocaleString('ch') + " CHF";
+  document.querySelector("#feeBase3").innerHTML = "Frais de base " + value3 + " %";
+  document.querySelector("#feeBase3BIS").innerHTML = ((document.querySelector("#annual_revenue_field").value/100) * value3).toLocaleString('ch') + " CHF";
+  document.querySelector("#feeYL3").innerHTML = "Frais de Youloop " + value3 * 0 + " %";
+  document.querySelector("#feeYL3BIS").innerHTML = ((document.querySelector("#expected_youloop_field").value/100) * value3 * 0).toLocaleString('ch') + " CHF";
+  document.querySelector("#feeComb3").innerHTML = "Total des frais " + Math.round((parseInt(document.querySelector("#annual_revenue_field").value)/100*value3 + parseInt(document.querySelector("#expected_youloop_field").value/100*(value3 *0))) * 100 / valueCombo) + " %";
+  document.querySelector("#feeComb3BIS").innerHTML = (parseInt(document.querySelector("#annual_revenue_field").value)/100*value3 + parseInt(document.querySelector("#expected_youloop_field").value/100*value3*0)).toLocaleString('ch') + " CHF";
   /* ----- 4eme slider ------- */
   document.querySelector("#feeBase4").innerHTML = "Frais de base " + value4 + " %<br>" + ((document.querySelector("#annual_revenue_field").value/100) * value4).toLocaleString('ch') + " CHF";
   document.querySelector("#feeYL4").innerHTML = "Frais de Youloop " + Math.round(value4 *0.5) + " %<br>" + Math.round((document.querySelector("#expected_youloop_field").value/100) * (value4 *0.5)).toLocaleString('ch') + " CHF";
