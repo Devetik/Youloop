@@ -52,6 +52,25 @@ html{
     margin-left: auto;
 }
 
+.card-body {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.col {
+    padding-right: 0px;
+    padding-left: 0px;
+}
+
+.container {
+    padding-right: 0px;
+    padding-left: 10px;
+}
+
+.text-nowrap {
+    white-space: nowrap;
+}
+
 /* Media query pour un affichage inférieur à la taille moyenne */
 @media (max-width: 768px) {
     .texte {

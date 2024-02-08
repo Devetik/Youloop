@@ -42,7 +42,7 @@ function calculTotal(){
   let value6 = parseInt(document.querySelector('#slider6').value);
   let value7 = parseInt(document.querySelector('#slider7').value);
   let value8 = parseInt(document.querySelector('#slider8').value);
-  let value9 = parseInt(document.querySelector('#slider9').value);
+  let value9 = 30; //Commission de Youloop
   let Ray = parseInt(inputYl.value);
   let valueTot = (value1 + value2 + value3 + value4 + value5 + value6 + value7 + value8);
   let valueYLTot = (value1 + value2*0.3 + value3*0 + value4*0.5 + value5 + value6*2 + value7 + value8*0.3 + value9);
