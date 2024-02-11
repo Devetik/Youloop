@@ -76,8 +76,9 @@ html{
     white-space: nowrap;
 }
 
+
 /* Media query pour un affichage inférieur à la taille moyenne */
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     .texte {
         font-weight: bold; /* Texte en gras pour les écrans plus petits que la taille moyenne */
     }
@@ -91,6 +92,13 @@ html{
 
     .nav-item {
         padding-left: 50px;
+    }
+}
+
+@media (min-width: 767px) {
+    .pad0 {
+        padding-left: 0px;
+        padding-right: 0px;
     }
 }
 
