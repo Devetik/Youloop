@@ -145,8 +145,6 @@ function calculTotal(){
     document.querySelector("#feeCombBenef").style.color = "green";
     benefice = "bénéfices";
   }
-  console.log(valueTot)
-  console.log(valueYLTot)
 }
 
 

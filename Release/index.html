@@ -19,6 +19,7 @@
                 <img src="img/YoulooplogoGW.png" class="mx-auto" style="height: 30px">
                 Youloop</a>
         </div>
+        
         <div class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
             <span class="navbar-toggler-icon"></span>
         </div>
@@ -762,6 +763,25 @@
         var popoverpList = popoverTriggerList.map(function (popoverTriggerE1) {
             return new bootstrap.Popover(popoverTriggerE1)
         })
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+    $(document).ready(function() {
+        // Sélectionnez tous les liens de la navbar
+        $('.navbar-nav .nav-link').on('click', function() {
+        // Fermez le menu en cliquant sur le bouton de la barre de navigation
+        $('.navbar-toggler').click();
+        // Récupérez l'identifiant de la cible du lien
+        var target = $(this).attr('href');
+        // Défilement vers l'élément désiré avec une animation douce
+        $('html, body').animate({
+            scrollTop: $(target).offset().top
+        }, 1000);
+        // Empêcher le comportement par défaut du lien
+        return false;
+        });
+    });
     </script>
 
 </body>
