@@ -130,7 +130,7 @@ function calculTotal(){
   document.querySelector("#totalpercent").innerHTML = parseInt(parseInt(value1) + parseInt(value2) + parseInt(value3) + parseInt(value4) + parseInt(value5) + parseInt(value6) + parseInt(value7) + parseInt(value8)) + " %";
 
   if (valueTot <= 100){
-    document.querySelector("#totalpercent").style.color = "black";
+    document.querySelector("#totalpercent").style.color = "#B2FAAF";
   } else if (valueTot > 100){
     document.querySelector("#totalpercent").style.color = "red";
   }
@@ -142,7 +142,7 @@ function calculTotal(){
     document.querySelector("#feeCombBenef").style.color = "black";
     benefice = "bénéfices";
   } else if (((((100 - valueTot)*100000000 / revenueAnnuel)+((100 - valueYLTot)/100*revenueAnnuelYouLoop))*100/ valueCombo) > 0) {
-    document.querySelector("#feeCombBenef").style.color = "black";
+    document.querySelector("#feeCombBenef").style.color = "green";
     benefice = "bénéfices";
   }
 }
